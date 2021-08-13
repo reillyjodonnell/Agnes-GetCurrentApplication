@@ -11,7 +11,10 @@ namespace GetCurrentApplication
     {
         public static void Main(string[] args)
         {
+           
+            
             CreateHostBuilder(args).Build().Run();
+            Worker.writeAllDataToFile();
         }
 
         public static IHostBuilder CreateHostBuilder(string[] args) =>
@@ -19,6 +22,7 @@ namespace GetCurrentApplication
                 .ConfigureServices((hostContext, services) =>
                 {
                     services.AddHostedService<Worker>();
+                    //Worker.initStopwatch();
                 });
     }
 }

@@ -1,0 +1,3 @@
+VsDebugConsole: 3.3147245
+devenv: 7.0703818
+Spotify: 4.0631622

@@ -1,9 +1,11 @@
 {
   "version": 2,
-  "dgSpecHash": "qxcC58MWxrCNDGPZN0LacjBDm7XdZzSphdgQ8fRTqtqCEBQG4UwBvOUidPYJuknWhfM5WsYai6BOa7pc8u1e6w==",
+  "dgSpecHash": "zEW7tf53TEIp9SoEuYtJBLamJt2qlGL4wlE41c1aNsvYLl6WtZ02xisHBkYi2o4OOvRMlizKEMuFCIPn3xbs/Q==",
   "success": true,
   "projectFilePath": "D:\\Programming\\C#\\Agnes-GetCurrentApplication\\GetCurrentApplication\\GetCurrentApplication.csproj",
   "expectedPackageFiles": [
+    "C:\\Users\\reill\\.nuget\\packages\\microsoft.data.sqlite\\5.0.9\\microsoft.data.sqlite.5.0.9.nupkg.sha512",
+    "C:\\Users\\reill\\.nuget\\packages\\microsoft.data.sqlite.core\\5.0.9\\microsoft.data.sqlite.core.5.0.9.nupkg.sha512",
     "C:\\Users\\reill\\.nuget\\packages\\microsoft.extensions.configuration\\3.1.16\\microsoft.extensions.configuration.3.1.16.nupkg.sha512",
     "C:\\Users\\reill\\.nuget\\packages\\microsoft.extensions.configuration.abstractions\\3.1.16\\microsoft.extensions.configuration.abstractions.3.1.16.nupkg.sha512",
     "C:\\Users\\reill\\.nuget\\packages\\microsoft.extensions.configuration.binder\\3.1.16\\microsoft.extensions.configuration.binder.3.1.16.nupkg.sha512",
@@ -31,7 +33,12 @@
     "C:\\Users\\reill\\.nuget\\packages\\microsoft.extensions.primitives\\3.1.16\\microsoft.extensions.primitives.3.1.16.nupkg.sha512",
     "C:\\Users\\reill\\.nuget\\packages\\microsoft.netcore.platforms\\3.1.0\\microsoft.netcore.platforms.3.1.0.nupkg.sha512",
     "C:\\Users\\reill\\.nuget\\packages\\microsoft.win32.registry\\4.7.0\\microsoft.win32.registry.4.7.0.nupkg.sha512",
+    "C:\\Users\\reill\\.nuget\\packages\\sqlitepclraw.bundle_e_sqlite3\\2.0.4\\sqlitepclraw.bundle_e_sqlite3.2.0.4.nupkg.sha512",
+    "C:\\Users\\reill\\.nuget\\packages\\sqlitepclraw.core\\2.0.4\\sqlitepclraw.core.2.0.4.nupkg.sha512",
+    "C:\\Users\\reill\\.nuget\\packages\\sqlitepclraw.lib.e_sqlite3\\2.0.4\\sqlitepclraw.lib.e_sqlite3.2.0.4.nupkg.sha512",
+    "C:\\Users\\reill\\.nuget\\packages\\sqlitepclraw.provider.dynamic_cdecl\\2.0.4\\sqlitepclraw.provider.dynamic_cdecl.2.0.4.nupkg.sha512",
     "C:\\Users\\reill\\.nuget\\packages\\system.diagnostics.eventlog\\4.7.0\\system.diagnostics.eventlog.4.7.0.nupkg.sha512",
+    "C:\\Users\\reill\\.nuget\\packages\\system.memory\\4.5.3\\system.memory.4.5.3.nupkg.sha512",
     "C:\\Users\\reill\\.nuget\\packages\\system.security.accesscontrol\\4.7.0\\system.security.accesscontrol.4.7.0.nupkg.sha512",
     "C:\\Users\\reill\\.nuget\\packages\\system.security.principal.windows\\4.7.0\\system.security.principal.windows.4.7.0.nupkg.sha512"
   ],
