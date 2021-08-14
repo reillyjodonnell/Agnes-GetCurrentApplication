@@ -74,6 +74,11 @@ namespace GetCurrentApplication
             }
         }
 
+        static void getTimeUserOpenedCurrentApplication(string currentApplication)
+        {
+
+        }
+
         static void ViewTimeOfCurrentApplication(string currentApplication)
         {
             Console.WriteLine($"{currentApplication} has been running for {stop[currentApplication]} seconds");
@@ -264,26 +269,7 @@ namespace GetCurrentApplication
             }
             //Console.WriteLine(uniqueApplicationNames.Count);
         }
-        
-
-        /// <summary>
-        /// This function will subscribe a process to the counter and then unsubscribe when it's closed
-        /// </summary>
-        /// 
-
-        public DateTime StartTime { get; set; }
-        public TimeSpan TotalTime { get; set; }
-        public object activeSession { get; set; }
-
-        public void subscribeProcess(object activeSession)
-        {
-            this.activeSession = activeSession;
-        }
-        public void programActivated()
-        {
-            this.StartTime = DateTime.Now;
-            Console.WriteLine(this.StartTime);
-        }
+     
 
         public static void writeAllDataToFile()
         {
@@ -302,7 +288,7 @@ namespace GetCurrentApplication
             {
                 connection.Open();
 
-                string sql = "CREATE TABLE IF NOT EXISTS userActivity (application VARCHAR(20), time DOUBLE)";
+                string sql = "CREATE TABLE IF NOT EXISTS userActivity (date application VARCHAR(20), time DOUBLE)";
 
                 SqliteCommand command = new SqliteCommand(sql, connection);
 
@@ -320,12 +306,6 @@ namespace GetCurrentApplication
         }
 
 
-
-
-
-
-
-
         private readonly ILogger<Worker> _logger;
 
         public Worker(ILogger<Worker> logger)
@@ -333,7 +313,10 @@ namespace GetCurrentApplication
             _logger = logger;
         }
 
-
+        public static string test()
+        {
+            return "Hello world";
+        }
 
 
         
