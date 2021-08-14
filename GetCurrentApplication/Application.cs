@@ -9,7 +9,8 @@ namespace GetCurrentApplication
         //Has a date
         private DateTime date;
         //A time
-        private DateTime time;
+        private DateTime timeStarted;
+        private DateTime timeEnded;
         //A string (name of the application)
         private string nameOfApplication;
         //Amount of time
@@ -27,13 +28,23 @@ namespace GetCurrentApplication
             date = passedDate;
         }
 
-        public DateTime getTime()
+        public DateTime getTimeStarted()
         {
-            return time;
+            return timeStarted;
         }
-        public void getDate(DateTime passedTime)
+
+
+        public void setTimeStarted(DateTime time)
         {
-            time = passedTime;
+            timeStarted = time;
+        }
+        public DateTime getTimeEnded( )
+        {
+            return timeEnded;
+        }
+        public void setTimeEnded(DateTime time)
+        {
+            timeEnded = time;
         }
 
         public string getNameOfApplication()
