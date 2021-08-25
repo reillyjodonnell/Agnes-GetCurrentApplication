@@ -9,7 +9,8 @@
       "GetCurrentApplication/1.0.0": {
         "dependencies": {
           "Microsoft.Data.Sqlite": "5.0.9",
-          "Microsoft.Extensions.Hosting": "3.1.16"
+          "Microsoft.Extensions.Hosting": "3.1.16",
+          "Microsoft.VisualStudio.Azure.Containers.Tools.Targets": "1.10.14"
         },
         "runtime": {
           "GetCurrentApplication.dll": {}
@@ -324,6 +325,7 @@
         }
       },
       "Microsoft.NETCore.Platforms/3.1.0": {},
+      "Microsoft.VisualStudio.Azure.Containers.Tools.Targets/1.10.14": {},
       "Microsoft.Win32.Registry/4.7.0": {
         "dependencies": {
           "System.Security.AccessControl": "4.7.0",
@@ -670,6 +672,13 @@
       "sha512": "sha512-z7aeg8oHln2CuNulfhiLYxCVMPEwBl3rzicjvIX+4sUuCwvXw5oXQEtbiU2c0z4qYL5L3Kmx0mMA/+t/SbY67w==",
       "path": "microsoft.netcore.platforms/3.1.0",
       "hashPath": "microsoft.netcore.platforms.3.1.0.nupkg.sha512"
+    },
+    "Microsoft.VisualStudio.Azure.Containers.Tools.Targets/1.10.14": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-vjweoaSTnMiJY4Ts4/9xHt3vStk36q8FRXxvwqSx7YjdXTbQE0i/JxncHeL6vsdE1+4sn6of2/eLQeGZ43eL2Q==",
+      "path": "microsoft.visualstudio.azure.containers.tools.targets/1.10.14",
+      "hashPath": "microsoft.visualstudio.azure.containers.tools.targets.1.10.14.nupkg.sha512"
     },
     "Microsoft.Win32.Registry/4.7.0": {
       "type": "package",

@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "zEW7tf53TEIp9SoEuYtJBLamJt2qlGL4wlE41c1aNsvYLl6WtZ02xisHBkYi2o4OOvRMlizKEMuFCIPn3xbs/Q==",
+  "dgSpecHash": "b5Jm4NkU5fS8yVM+CcdSYwBDsuZaHE+OehyBaRVVmQ59PeRwm5tXRFdd+vffmzlkKQOW8GSWlzfHnrkry+syUA==",
   "success": true,
   "projectFilePath": "D:\\Programming\\C#\\Agnes-GetCurrentApplication\\GetCurrentApplication\\GetCurrentApplication.csproj",
   "expectedPackageFiles": [
@@ -32,6 +32,7 @@
     "C:\\Users\\reill\\.nuget\\packages\\microsoft.extensions.options.configurationextensions\\3.1.16\\microsoft.extensions.options.configurationextensions.3.1.16.nupkg.sha512",
     "C:\\Users\\reill\\.nuget\\packages\\microsoft.extensions.primitives\\3.1.16\\microsoft.extensions.primitives.3.1.16.nupkg.sha512",
     "C:\\Users\\reill\\.nuget\\packages\\microsoft.netcore.platforms\\3.1.0\\microsoft.netcore.platforms.3.1.0.nupkg.sha512",
+    "C:\\Users\\reill\\.nuget\\packages\\microsoft.visualstudio.azure.containers.tools.targets\\1.10.14\\microsoft.visualstudio.azure.containers.tools.targets.1.10.14.nupkg.sha512",
     "C:\\Users\\reill\\.nuget\\packages\\microsoft.win32.registry\\4.7.0\\microsoft.win32.registry.4.7.0.nupkg.sha512",
     "C:\\Users\\reill\\.nuget\\packages\\sqlitepclraw.bundle_e_sqlite3\\2.0.4\\sqlitepclraw.bundle_e_sqlite3.2.0.4.nupkg.sha512",
     "C:\\Users\\reill\\.nuget\\packages\\sqlitepclraw.core\\2.0.4\\sqlitepclraw.core.2.0.4.nupkg.sha512",

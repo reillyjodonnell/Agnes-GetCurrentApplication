@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "yYFuWhQrmbzvpXCwV/NVBJdDi1zNZ9sfbgulyNYi7UNe/051pf5Wvmi532jrOBJT6p/RH8Htf2SpJ7p7qrF6fg==",
+  "dgSpecHash": "PJXWH1nSJaDXChopsGRTFqsnM3TM4MRf9MbhdBUa2LCmKJArI5higqV7LncYc5nPgk2QJJ+JHQjxHsRmr1qIvw==",
   "success": true,
   "projectFilePath": "D:\\Programming\\C#\\Agnes-GetCurrentApplication\\Agnes-GetCurrentApplication.Tests\\Agnes-GetCurrentApplication.Tests.csproj",
   "expectedPackageFiles": [
@@ -39,6 +39,7 @@
     "C:\\Users\\reill\\.nuget\\packages\\microsoft.netcore.targets\\1.1.0\\microsoft.netcore.targets.1.1.0.nupkg.sha512",
     "C:\\Users\\reill\\.nuget\\packages\\microsoft.testplatform.objectmodel\\16.9.4\\microsoft.testplatform.objectmodel.16.9.4.nupkg.sha512",
     "C:\\Users\\reill\\.nuget\\packages\\microsoft.testplatform.testhost\\16.9.4\\microsoft.testplatform.testhost.16.9.4.nupkg.sha512",
+    "C:\\Users\\reill\\.nuget\\packages\\microsoft.visualstudio.azure.containers.tools.targets\\1.10.14\\microsoft.visualstudio.azure.containers.tools.targets.1.10.14.nupkg.sha512",
     "C:\\Users\\reill\\.nuget\\packages\\microsoft.win32.primitives\\4.3.0\\microsoft.win32.primitives.4.3.0.nupkg.sha512",
     "C:\\Users\\reill\\.nuget\\packages\\microsoft.win32.registry\\4.7.0\\microsoft.win32.registry.4.7.0.nupkg.sha512",
     "C:\\Users\\reill\\.nuget\\packages\\netstandard.library\\1.6.1\\netstandard.library.1.6.1.nupkg.sha512",
