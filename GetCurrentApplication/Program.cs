@@ -14,7 +14,6 @@ namespace GetCurrentApplication
            
             
             CreateHostBuilder(args).Build().Run();
-            Worker.writeAllDataToFile();
         }
 
         public static IHostBuilder CreateHostBuilder(string[] args) =>

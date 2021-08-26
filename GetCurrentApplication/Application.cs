@@ -18,7 +18,7 @@ namespace GetCurrentApplication
         private double timeSpentOnApplication;
 
         //the timer
-        private Stopwatch stop = Stopwatch.StartNew();
+        private Stopwatch stopwatch = Stopwatch.StartNew();
 
         
 
@@ -29,66 +29,60 @@ namespace GetCurrentApplication
         public Application(string applicationName)
         {
             nameOfApplication = applicationName;
-            date = DateTime.Now.ToString("MM-yyyy-dd");
+            date = DateTime.Now.ToString("MM-dd-yyyy");
             timeStarted = DateTime.Now.TimeOfDay;      
         }
 
         public void PauseStopwatch()
         {
-            stop.Stop();
+            stopwatch.Stop();
         }
 
         public void ResumeStopwatch()
         {
-            stop.Start();
+            stopwatch.Start();
         }
 
-        public string consoleTimeElapsed()
+        public void consoleTimeElapsed()
         {
-            return stop.Elapsed.ToString();
+            Console.WriteLine(stopwatch.Elapsed.TotalSeconds);
         }
         
 
         public void ViewTimeOfCurrentApplication( )
         {
-            Console.WriteLine($"{nameOfApplication} has been running for {consoleTimeElapsed()} seconds");
+            Console.WriteLine($"{nameOfApplication} has been running for {stopwatch.Elapsed.TotalSeconds} seconds");
         }
 
 
 
 
 
-        /*
+        
         ///getter and setter methods
-        public DateTime getDate()
+        public string getDate()
         {
             return date;
         }
-        public void setDate(DateTime passedDate)
-        {
-            date = passedDate;
-        }
 
 
-        public DateTime getTimeStarted()
+        public TimeSpan getTimeStarted()
         {
             return timeStarted;
         }
-        public void setTimeStarted(DateTime time)
+        public void setTimeStarted(TimeSpan time)
         {
             timeStarted = time;
         }
 
-        public DateTime getTimeEnded()
+        public TimeSpan getTimeEnded()
         {
             return timeEnded;
         }
-        public void setTimeEnded(DateTime time)
+        public void setTimeEnded(TimeSpan time)
         {
             timeEnded = time;
         }
-
-        */
         public string getNameOfApplication()
         {
             return nameOfApplication;
@@ -97,23 +91,18 @@ namespace GetCurrentApplication
         {
             nameOfApplication = name;
         }
-        /*
+        
 
 
         public double getTimeSpentOnApplication()
         {
-            return timeSpentOnApplication;
+            return stopwatch.Elapsed.TotalSeconds;
         }
         public void setTimeSpentOnApplication(double time)
         {
             timeSpentOnApplication = time;
         }
-        /*
-
-
-
-
-
+     
 
         /*
         // Set a variable to the Documents path.

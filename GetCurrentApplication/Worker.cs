@@ -181,8 +181,6 @@ namespace GetCurrentApplication
         //Create a list of instances of the Application class
         List<Application> listOfAllRunningApplications = new List<Application>();
 
-        Application activeApplication;
-
         List<string> namesOfAllRunningApplications = new List<string>();
 
         static Dictionary<string, Stopwatch> stop = new Dictionary<string, Stopwatch>();
@@ -215,6 +213,8 @@ namespace GetCurrentApplication
                 { 
                     list.ResumeStopwatch();
                     list.ViewTimeOfCurrentApplication();
+                    Console.WriteLine(list.getTimeStarted());
+                    Console.WriteLine(list.getDate());
 
                 }
             }
@@ -240,7 +240,6 @@ namespace GetCurrentApplication
         public void checkActiveApplication()
         {
             pauseAllTimersExceptActiveApplication();
-            Console.WriteLine($"{getTheCurrentApplicationName()} is the active screen");
 
         }
 
@@ -255,33 +254,14 @@ namespace GetCurrentApplication
             }
             else if(checkIfCurrentApplicationHasRunBefore() == false)
             {
-                //stop all timers
-                pauseTheTimer(activeApplication);
 
                 Application currentRunningApplication = createInstanceOfApplication();
 
-                
-
-                activeApplication = currentRunningApplication; 
-                
                 addInstatiatedObjectToApplicationList(currentRunningApplication);
 
                 addInstatiatedObjectToStringList();
             }
         }
-
-        public void pauseTheTimer(Application currentApplication)
-        {
-            if (currentApplication != null)
-            {
-                currentApplication.PauseStopwatch();
-
-            }
-            else return;
-        }
-
-       
-
  
         public Application createInstanceOfApplication()
         {
@@ -341,32 +321,32 @@ namespace GetCurrentApplication
 
      
 
-        public static void writeAllDataToFile()
+        public void writeAllDataToFile()
         {
-            Console.WriteLine("Program safely closing");
+            Console.WriteLine("Writing to file!");
             using (StreamWriter file = new StreamWriter("getCurrentApplicationData.txt"))
-            foreach(var item in stop)
+            foreach(var item in listOfAllRunningApplications)
                 {
-                    file.WriteLine("{0}: {1}", item.Key, item.Value.Elapsed.TotalSeconds);
+                    file.WriteLine("{0}: {1}", item.getNameOfApplication(), item.getTimeSpentOnApplication());
                 }
             writeToDatabase();
         }
 
-        public static void writeToDatabase()
+        public void writeToDatabase()
         {
             using (var connection = new SqliteConnection("Data Source=hello.db"))
             {
                 connection.Open();
 
-                string sql = "CREATE TABLE IF NOT EXISTS userActivity (date application VARCHAR(20), time DOUBLE)";
+                string sql = "CREATE TABLE IF NOT EXISTS userActivity (date DATE, timeStarted TIME, applicationName VARCHAR(20), timeOnApplication DOUBLE)";
 
                 SqliteCommand command = new SqliteCommand(sql, connection);
 
                 command.ExecuteNonQuery();
 
-                foreach (var item in stop)
+                foreach (var item in listOfAllRunningApplications)
                 {
-                    string sql2 = $"INSERT into userActivity (application, time) values('{item.Key}', {item.Value.Elapsed.TotalSeconds} )";
+                    string sql2 = $"INSERT into userActivity (date, timeStarted, applicationName, timeOnApplication) values ('{item.getDate()}', '{item.getTimeStarted()}', '{item.getNameOfApplication()}', '{item.getTimeSpentOnApplication()}' )";
                     SqliteCommand command2 = new SqliteCommand(sql2, connection);
                     command2.ExecuteNonQuery();
 
@@ -378,29 +358,10 @@ namespace GetCurrentApplication
 
         }
 
-
-        private readonly ILogger<Worker> _logger;
-
-        public Worker(ILogger<Worker> logger)
-        {
-            _logger = logger;
-        }
-
-        public static string test()
-        {
-            return "Hello world";
-        }
-
-
-        
-
-
-
-
         protected override async Task ExecuteAsync(CancellationToken stoppingToken)
         {
 
-            Console.WriteLine("Test");
+            
             
             //
             while (!stoppingToken.IsCancellationRequested)
@@ -410,9 +371,10 @@ namespace GetCurrentApplication
                 //getTheUniqueApplications();
 
                 lookForApplications();
+                writeAllDataToFile();
 
+                await Task.Delay(10000, stoppingToken);
 
-                await Task.Delay(1000, stoppingToken);
             }
             
 
